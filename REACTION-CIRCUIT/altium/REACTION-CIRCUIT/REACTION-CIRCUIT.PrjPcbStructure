@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=REACTION-CIRCUIT.SchDoc
+Record=SheetSymbol|SourceDocument=REACTION-CIRCUIT.SchDoc|Designator=REACTION-CIRCUIT-CONTROL.SchDoc|SchDesignator=REACTION-CIRCUIT-CONTROL.SchDoc|FileName=REACTION-CIRCUIT-CONTROL.SchDoc|SymbolType=Normal|RawFileName=REACTION-CIRCUIT-CONTROL.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=REACTION-CIRCUIT.SchDoc|Designator=REACTION-CIRCUIT-DISPLAY.SchDoc|SchDesignator=REACTION-CIRCUIT-DISPLAY.SchDoc|FileName=REACTION-CIRCUIT-DISPLAY.SchDoc|SymbolType=Normal|RawFileName=REACTION-CIRCUIT-DISPLAY.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

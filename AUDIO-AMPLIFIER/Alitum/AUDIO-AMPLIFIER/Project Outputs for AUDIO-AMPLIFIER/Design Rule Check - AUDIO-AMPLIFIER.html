@@ -1,0 +1,416 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\tunaBasicSoft\altium20\Documents\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5/24/2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3:21:54 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc" class="file"><acronym title="D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc">D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">1</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">23</td></tr>
+</table>
+</td>
+</table><a name="ID5YAW1AMT51XDIFSPKGG5ERVG0G0U1YZYVXY14GNDOAYVBCAO114I"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVX51TMVRO1NXKZY4WS3NWJSBZPUSF1MPQKRMMLPLENF2KOZ4SJNG">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</a></td>
+<td class="column2">1</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">1</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBECVXUCVVEFKFTFTZINXFNGFAFLTRFUYQQT23YHAXJIV0HD4VZ1C">Clearance Constraint (Gap=0.5mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3Z340TTBJXLHOFKFZHM5J52RVBNAEBIZG34IJWO04YKEOJ43VVFI">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIBGVWQPP5LY5I05DDZQNQEWGLDLDHWPQQMEYOFJBYO5QNBAAPHWF">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOKB2MW4TAJCGIMHHVUGV4KW1HEGR3L5OIKHVNBCAPWPQGPD0EH">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVUC2GGIG2OSFZXQKIS3ROYDWLN2HPW3YHBKS1CH4IBH0FE23D0M">Width Constraint (Min=0.4mm) (Max=1mm) (Preferred=0.5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAMJDO0T5SFSDKN3L2G2I1SWITLPIMGK4LNVK25GI3SHYZSBG23NC">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYQS5X3PWME0PJ1HGIDCV44GZUIBDN5ZRDQCFAODIUJ4HOA4WCXEM">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTENQWXHB2NR2CKDXJVX4ZRK5XOY3ZGQTQRJCQXJSZYP4DZY30KNI">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3RUFFIPIRAYEI253KMJXXAHDGH335W0OOEKMMAH5NZF5WIHBICKP">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFHLZDUYMSQUKP452EJXS0EUZCFETGYOIPOPW0WOR2KTOLESSNSMF">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">19</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3KWRZIVT3JATGM50J2DZK4G0UPVWOODCEA0IKV0JMTECC4OFVP">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1BKL4NMVNFESGJWRX4NSR5B5RHD3A2DOTPOLEDP2NKFUUHH4K5VG">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDU23D2GFNPD0OG30ZAQD4NZN4FP5XKD5WDW3ODVKEF3IEOWGSDP4D">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">23</td>
+</tr>
+</table><br><a name="IDGJGLCITNINPSWU5FBKJ4CH21DIU5JQIR3YXD1PPULF0FS1FXPWK"><h2>Warnings</h2></a><a name="IDVX51TMVRO1NXKZY4WS3NWJSBZPUSF1MPQKRMMLPLENF2KOZ4SJNG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Design contains shelved or modified (but not repoured) polygons. The result of DRC is not correct. Recommended to restore/repour all polygons and proceed with DRC again</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Polygon named: GND_L02_P000</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOKB2MW4TAJCGIMHHVUGV4KW1HEGR3L5OIKHVNBCAPWPQGPD0EH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Modified Polygon (Allow modified: No), (Allow shelved: No)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395mil|Location2.X=7000mil|Location1.Y=1000mil|Location2.Y=2815mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4395mil|Location2.X=7000mil|Location1.Y=1000mil|Location2.Y=2815mil|Absolute=True">Modified Polygon: Polygon Not Repour After Edit  (GND_L02_P000) on Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDFHLZDUYMSQUKP452EJXS0EUZCFETGYOIPOPW0WOR2KTOLESSNSMF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4716.227mil|Location2.X=4727.477mil|Location1.Y=1456.428mil|Location2.Y=1468.146mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4716.227mil|Location2.X=4727.477mil|Location1.Y=1456.428mil|Location2.Y=1468.146mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.038mm &lt; 0.254mm) Between Arc (120.65mm,36.576mm) on Top Overlay And Pad Cx1-1(120.65mm,36.576mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0.038mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4889.906mil|Location2.X=4901.156mil|Location1.Y=1398.31mil|Location2.Y=1409.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4889.906mil|Location2.X=4901.156mil|Location1.Y=1398.31mil|Location2.Y=1409.587mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.125mm &lt; 0.254mm) Between Arc (124.46mm,36.576mm) on Top Overlay And Pad Cx1-2(124.46mm,36.576mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0.125mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5215.838mil|Location2.X=5227.088mil|Location1.Y=1317.852mil|Location2.Y=1329.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5215.838mil|Location2.X=5227.088mil|Location1.Y=1317.852mil|Location2.Y=1329.102mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.06mm &lt; 0.254mm) Between Arc (133.92mm,36.601mm) on Top Overlay And Pad Q3-1(133.604mm,34.036mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0.06mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5219.693mil|Location2.X=5227.359mil|Location1.Y=1556.108mil|Location2.Y=1563.774mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5219.693mil|Location2.X=5227.359mil|Location1.Y=1556.108mil|Location2.Y=1563.774mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Arc (133.92mm,36.601mm) on Top Overlay And Pad Q3-3(133.604mm,39.116mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4739.906mil|Location2.X=4751.156mil|Location1.Y=1398.31mil|Location2.Y=1409.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4739.906mil|Location2.X=4751.156mil|Location1.Y=1398.31mil|Location2.Y=1409.587mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.125mm &lt; 0.254mm) Between Pad Cx1-1(120.65mm,36.576mm) on Multi-Layer And Track (120.65mm,35.56mm)(124.46mm,35.56mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.125mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4737.686mil|Location2.X=4748.936mil|Location1.Y=1469.049mil|Location2.Y=1481.407mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4737.686mil|Location2.X=4748.936mil|Location1.Y=1469.049mil|Location2.Y=1481.407mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.224mm &lt; 0.254mm) Between Pad Cx1-1(120.65mm,36.576mm) on Multi-Layer And Track (120.65mm,37.592mm)(124.46mm,37.592mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.224mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.407mil|Location2.X=4787.657mil|Location1.Y=1434.375mil|Location2.Y=1445.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4776.407mil|Location2.X=4787.657mil|Location1.Y=1434.375mil|Location2.Y=1445.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.227mm &lt; 0.254mm) Between Pad Cx1-1(120.65mm,36.576mm) on Multi-Layer And Track (121.666mm,36.576mm)(122.174mm,36.576mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.227mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4880.004mil|Location2.X=4891.254mil|Location1.Y=1400.159mil|Location2.Y=1411.409mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4880.004mil|Location2.X=4891.254mil|Location1.Y=1400.159mil|Location2.Y=1411.409mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.116mm &lt; 0.254mm) Between Pad Cx1-2(124.46mm,36.576mm) on Multi-Layer And Track (120.65mm,35.56mm)(124.46mm,35.56mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.116mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4874.484mil|Location2.X=4885.734mil|Location1.Y=1467.034mil|Location2.Y=1478.284mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4874.484mil|Location2.X=4885.734mil|Location1.Y=1467.034mil|Location2.Y=1478.284mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.195mm &lt; 0.254mm) Between Pad Cx1-2(124.46mm,36.576mm) on Multi-Layer And Track (120.65mm,37.592mm)(124.46mm,37.592mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.195mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5289.592mil|Location2.X=5300.842mil|Location1.Y=1318.886mil|Location2.Y=1330.136mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5289.592mil|Location2.X=5300.842mil|Location1.Y=1318.886mil|Location2.Y=1330.136mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.077mm &lt; 0.254mm) Between Pad Q3-1(133.604mm,34.036mm) on Multi-Layer And Track (134.626mm,33.646mm)(135.255mm,34.087mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.077mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5288.47mil|Location2.X=5299.72mil|Location1.Y=1552.227mil|Location2.Y=1563.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5288.47mil|Location2.X=5299.72mil|Location1.Y=1552.227mil|Location2.Y=1563.477mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.071mm &lt; 0.254mm) Between Pad Q3-3(133.604mm,39.116mm) on Multi-Layer And Track (134.595mm,39.573mm)(135.255mm,39.243mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.071mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4919.556mil|Location2.X=4930.806mil|Location1.Y=2477.166mil|Location2.Y=2488.416mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4919.556mil|Location2.X=4930.806mil|Location1.Y=2477.166mil|Location2.Y=2488.416mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.016mm &lt; 0.254mm) Between Pad R1-1(125.222mm,64.135mm) on Multi-Layer And Track (125.196mm,62.027mm)(125.196mm,63.068mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.016mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4915.864mil|Location2.X=4927.114mil|Location1.Y=2158.794mil|Location2.Y=2172.431mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4915.864mil|Location2.X=4927.114mil|Location1.Y=2158.794mil|Location2.Y=2172.431mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.219mm &lt; 0.254mm) Between Pad R1-2(125.222mm,53.975mm) on Multi-Layer And Track (125.196mm,55.093mm)(125.196mm,56.058mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.219mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5069.562mil|Location2.X=5080.812mil|Location1.Y=2477.166mil|Location2.Y=2488.416mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5069.562mil|Location2.X=5080.812mil|Location1.Y=2477.166mil|Location2.Y=2488.416mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.016mm &lt; 0.254mm) Between Pad R2-1(129.032mm,64.135mm) on Multi-Layer And Track (129.007mm,62.027mm)(129.007mm,63.068mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.016mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.87mil|Location2.X=5077.12mil|Location1.Y=2158.794mil|Location2.Y=2172.431mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5065.87mil|Location2.X=5077.12mil|Location1.Y=2158.794mil|Location2.Y=2172.431mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.219mm &lt; 0.254mm) Between Pad R2-2(129.032mm,53.975mm) on Multi-Layer And Track (129.007mm,55.093mm)(129.007mm,56.058mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.219mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4768.041mil|Location2.X=4779.291mil|Location1.Y=2160.905mil|Location2.Y=2172.155mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4768.041mil|Location2.X=4779.291mil|Location1.Y=2160.905mil|Location2.Y=2172.155mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.196mm &lt; 0.254mm) Between Pad R3-1(121.412mm,53.975mm) on Multi-Layer And Track (121.437mm,55.042mm)(121.437mm,56.083mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.196mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4770.633mil|Location2.X=4781.883mil|Location1.Y=2476.761mil|Location2.Y=2490.427mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4770.633mil|Location2.X=4781.883mil|Location1.Y=2476.761mil|Location2.Y=2490.427mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.073mm &lt; 0.254mm) Between Pad R3-2(121.412mm,64.135mm) on Multi-Layer And Track (121.437mm,62.052mm)(121.437mm,63.017mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.073mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5294.538mil|Location2.X=5305.788mil|Location1.Y=1158.375mil|Location2.Y=1169.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5294.538mil|Location2.X=5305.788mil|Location1.Y=1158.375mil|Location2.Y=1169.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.17mm &lt; 0.254mm) Between Pad R4-1(133.731mm,29.591mm) on Multi-Layer And Track (134.798mm,29.566mm)(135.839mm,29.566mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.17mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5622.39mil|Location2.X=5633.64mil|Location1.Y=1158.375mil|Location2.Y=1169.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5622.39mil|Location2.X=5633.64mil|Location1.Y=1158.375mil|Location2.Y=1169.625mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.179mm &lt; 0.254mm) Between Pad R4-2(143.891mm,29.591mm) on Multi-Layer And Track (141.808mm,29.566mm)(142.773mm,29.566mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.179mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID3KWRZIVT3JATGM50J2DZK4G0UPVWOODCEA0IKV0JMTECC4OFVP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6103.011mil|Location2.X=6114.261mil|Location1.Y=1939.868mil|Location2.Y=1951.118mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6103.011mil|Location2.X=6114.261mil|Location1.Y=1939.868mil|Location2.Y=1951.118mil|Absolute=True">Silk To Silk Clearance Constraint: (0.198mm &lt; 0.254mm) Between Arc (163.322mm,49.403mm) on Top Overlay And Text "+" (153.997mm,48.666mm) on Top Overlay Silk Text to Silk Clearance [0.198mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4493.749mil|Location2.X=4505.661mil|Location1.Y=1983.368mil|Location2.Y=1994.618mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4493.749mil|Location2.X=4505.661mil|Location1.Y=1983.368mil|Location2.Y=1994.618mil|Absolute=True">Silk To Silk Clearance Constraint: (0.177mm &lt; 0.254mm) Between Text "C1" (114.262mm,49.568mm) on Top Overlay And Track (114.173mm,50.673mm)(114.173mm,55.753mm) on Top Overlay Silk Text to Silk Clearance [0.177mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4508.618mil|Location2.X=4519.868mil|Location1.Y=1983.368mil|Location2.Y=1994.618mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\tunaOneDrive\OneDrive - Hanoi University of Science and Technology\tunaOneDriveSync\tunaProjects\Mercenary-projects\AUDIO-AMPLIFIER\Alitum\AUDIO-AMPLIFIER\AUDIO-AMPLIFIER.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4508.618mil|Location2.X=4519.868mil|Location1.Y=1983.368mil|Location2.Y=1994.618mil|Absolute=True">Silk To Silk Clearance Constraint: (0.105mm &lt; 0.254mm) Between Text "C1" (114.262mm,49.568mm) on Top Overlay And Track (114.173mm,50.673mm)(116.713mm,50.673mm) on Top Overlay Silk Text to Silk Clearance [0.105mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

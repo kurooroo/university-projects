@@ -1,0 +1,35 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+rx_buffer                                                                         0x0160       8
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+G_temperature0                                                                    R5           1
+G_temperature1                                                                    R4           1
+rx_wr_index                                                                       R7           1
+rx_rd_index                                                                       R6           1
+rx_counter                                                                        R9           1
+rx_buffer_overflow                                                                R2.0      1bit
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+SPI_Write                                                                         0x00080     24
+SPI_ReadTemperature                                                               0x00098     26
+UART_Write                                                                        0x000B2      7
+UART_Println                                                                      0x000B9     20
+UART_Print                                                                        0x000CD     18
+usart_rx_isr                                                                      0x000DF     90
+spi_isr                                                                           0x00139      4
+main                                                                              0x0013D    101
+put_buff_G100                                                                     0x001A2     64
+_print_G100                                                                       0x001E2    308
+sprintf                                                                           0x00316     52
+strlen                                                                            0x0034A     12
+strlenf                                                                           0x00356     13

@@ -1,0 +1,5 @@
+Nguyên lý khối ADC 3 bit. Được offset để đo giá trị điện áp từ 0.35V đến 0.42V (35 đến 42 độ C)
+- Điện trở chia áp đầu vào (R1 đến R12) để tạo điện áp từ 0.35V đến 0.42V với bước điện áp 0.01V làm đầu vào cho IC so sánh LM339
+- IC so sánh: Khi điện áp ở chân + lớn hơn điện áp ở chân - thì đầu ra IC = 1, ngược lại đầu ra IC = 0
+- IC encoder 3bit chuyển 7 giá trị đầu ra của IC so sánh điện áp sang số nhị phân 3bit
+- 3bit nhị phân được đọc ở vi điều khiển để tính toán đưa ra giá trị nhiệt đô trong khoảng từ 0.35V - 0.42V 

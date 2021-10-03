@@ -1,0 +1,296 @@
+Added Component: Designator=C1(Cap 0805(2012))
+Added Component: Designator=C2(Cap 0805(2012))
+Added Component: Designator=C3(Cap 0805(2012))
+Added Component: Designator=C4(Cap 0805(2012))
+Added Component: Designator=C5(Cap 0805(2012))
+Added Component: Designator=C6(Cap 0805(2012))
+Added Component: Designator=D1(1N4007)
+Added Component: Designator=D2(1N4007)
+Added Component: Designator=DS1(LED7SEG-1-0.56)
+Add component (AddParameter): Name = "Colour"; Value = "Blue"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.agilent.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Dec-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Schematic revised, PCB Footprint replaced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MinimumIntensity"; Value = "2020 ucd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Note"; Value = "IF = 10 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=DS2(LED7SEG-1-0.56)
+Add component (AddParameter): Name = "Colour"; Value = "Blue"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.agilent.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Dec-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Schematic revised, PCB Footprint replaced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MinimumIntensity"; Value = "2020 ucd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Note"; Value = "IF = 10 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=DS3(LED7SEG-1-0.56)
+Add component (AddParameter): Name = "Colour"; Value = "Blue"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.agilent.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Dec-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Schematic revised, PCB Footprint replaced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MinimumIntensity"; Value = "2020 ucd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Note"; Value = "IF = 10 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=DS4(LED7SEG-1-0.56)
+Add component (AddParameter): Name = "Colour"; Value = "Blue"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.agilent.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Dec-2003"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Schematic revised, PCB Footprint replaced."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MinimumIntensity"; Value = "2020 ucd"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Note"; Value = "IF = 10 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDocument"; Value = "24-Sep-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "H"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(QTO-220H3)
+Add component (AddParameter): Name = "Value"; Value = "LM7805"; VariantName = "[No Variations]"
+Added Component: Designator=JDC(DC-IN)
+Add component (AddParameter): Name = "Value"; Value = "Jac DC"; VariantName = "[No Variations]"
+Added Component: Designator=R1(Res 0805(2012))
+Added Component: Designator=R2(Res 0805(2012))
+Added Component: Designator=R3(Res 0805(2012))
+Added Component: Designator=R4(Res 0805(2012))
+Added Component: Designator=R5(Res 0805(2012))
+Added Component: Designator=R6(Res 0805(2012))
+Added Component: Designator=R7(Res 0805(2012))
+Added Component: Designator=R8(Res 0805(2012))
+Added Component: Designator=R9(Res 0805(2012))
+Added Component: Designator=R10(Res 0805(2012))
+Added Component: Designator=R11(Res 0805(2012))
+Added Component: Designator=R12(Res 0805(2012))
+Added Component: Designator=R13(Res 0805(2012))
+Added Component: Designator=R14(Res 0805(2012))
+Added Component: Designator=R15(Res 0805(2012))
+Added Component: Designator=R16(Res 0805(2012))
+Added Component: Designator=R17(Res 0805(2012))
+Added Component: Designator=R18(Res 0805(2012))
+Added Component: Designator=R19(Res 0805(2012))
+Added Component: Designator=R20(Res 0805(2012))
+Added Component: Designator=R21(Res 0805(2012))
+Added Component: Designator=R22(Res 0805(2012))
+Added Component: Designator=R23(Res 0805(2012))
+Added Component: Designator=R24(Res 0805(2012))
+Added Component: Designator=R25(Res 0805(2012))
+Added Component: Designator=R26(Res 0805(2012))
+Added Component: Designator=R27(Res 0805(2012))
+Added Component: Designator=R28(Res 0805(2012))
+Added Component: Designator=R29(Res 0805(2012))
+Added Component: Designator=R30(Res 0805(2012))
+Added Component: Designator=R31(Res 0805(2012))
+Added Component: Designator=R32(Res 0805(2012))
+Added Component: Designator=R33(Res 0805(2012))
+Added Component: Designator=RESET(SW4B)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=START(SW4B)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=STOP(SW4B)
+Add component (AddParameter): Name = "Value"; Value = "Button chip 4 pin"; VariantName = "[No Variations]"
+Added Component: Designator=X1(XT2)
+Add component (AddParameter): Name = "Value"; Value = "4Mhz"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=START Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=12V Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=5V Pin=C5-2
+Added Pin To Net: NetName=NetC6_1 Pin=C6-1
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_1 Pin=D1-1
+Added Pin To Net: NetName=RESET Pin=D1-2
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=RESET Pin=D2-2
+Added Pin To Net: NetName=NetDS1_1 Pin=DS1-1
+Added Pin To Net: NetName=NetDS1_2 Pin=DS1-2
+Added Pin To Net: NetName=GND Pin=DS1-3
+Added Pin To Net: NetName=NetDS1_4 Pin=DS1-4
+Added Pin To Net: NetName=NetDS1_6 Pin=DS1-6
+Added Pin To Net: NetName=NetDS1_7 Pin=DS1-7
+Added Pin To Net: NetName=GND Pin=DS1-8
+Added Pin To Net: NetName=NetDS1_9 Pin=DS1-9
+Added Pin To Net: NetName=NetDS1_10 Pin=DS1-10
+Added Pin To Net: NetName=NetDS2_1 Pin=DS2-1
+Added Pin To Net: NetName=NetDS2_2 Pin=DS2-2
+Added Pin To Net: NetName=GND Pin=DS2-3
+Added Pin To Net: NetName=NetDS2_4 Pin=DS2-4
+Added Pin To Net: NetName=NetDS2_6 Pin=DS2-6
+Added Pin To Net: NetName=NetDS2_7 Pin=DS2-7
+Added Pin To Net: NetName=GND Pin=DS2-8
+Added Pin To Net: NetName=NetDS2_9 Pin=DS2-9
+Added Pin To Net: NetName=NetDS2_10 Pin=DS2-10
+Added Pin To Net: NetName=NetDS3_1 Pin=DS3-1
+Added Pin To Net: NetName=NetDS3_2 Pin=DS3-2
+Added Pin To Net: NetName=GND Pin=DS3-3
+Added Pin To Net: NetName=NetDS3_4 Pin=DS3-4
+Added Pin To Net: NetName=NetDS3_6 Pin=DS3-6
+Added Pin To Net: NetName=NetDS3_7 Pin=DS3-7
+Added Pin To Net: NetName=GND Pin=DS3-8
+Added Pin To Net: NetName=NetDS3_9 Pin=DS3-9
+Added Pin To Net: NetName=NetDS3_10 Pin=DS3-10
+Added Pin To Net: NetName=NetDS4_1 Pin=DS4-1
+Added Pin To Net: NetName=NetDS4_2 Pin=DS4-2
+Added Pin To Net: NetName=GND Pin=DS4-3
+Added Pin To Net: NetName=NetDS4_4 Pin=DS4-4
+Added Pin To Net: NetName=NetDS4_6 Pin=DS4-6
+Added Pin To Net: NetName=NetDS4_7 Pin=DS4-7
+Added Pin To Net: NetName=GND Pin=DS4-8
+Added Pin To Net: NetName=NetDS4_9 Pin=DS4-9
+Added Pin To Net: NetName=NetDS4_10 Pin=DS4-10
+Added Pin To Net: NetName=12V Pin=IC1-1
+Added Pin To Net: NetName=GND Pin=IC1-2
+Added Pin To Net: NetName=GND Pin=IC1-2
+Added Pin To Net: NetName=5V Pin=IC1-3
+Added Pin To Net: NetName=12V Pin=JDC-1
+Added Pin To Net: NetName=GND Pin=JDC-2
+Added Pin To Net: NetName=NetC2_2 Pin=R1-1
+Added Pin To Net: NetName=NetC1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=5V Pin=R2-2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=5V Pin=R3-2
+Added Pin To Net: NetName=NetC6_1 Pin=R4-1
+Added Pin To Net: NetName=GND Pin=R4-2
+Added Pin To Net: NetName=NetD2_1 Pin=R5-1
+Added Pin To Net: NetName=GND Pin=R5-2
+Added Pin To Net: NetName=NetDS1_7 Pin=R6-1
+Added Pin To Net: NetName=NetR6_2 Pin=R6-2
+Added Pin To Net: NetName=NetDS1_6 Pin=R7-1
+Added Pin To Net: NetName=NetR7_2 Pin=R7-2
+Added Pin To Net: NetName=NetDS1_4 Pin=R8-1
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Pin To Net: NetName=NetDS1_2 Pin=R9-1
+Added Pin To Net: NetName=NetR9_2 Pin=R9-2
+Added Pin To Net: NetName=NetDS1_1 Pin=R10-1
+Added Pin To Net: NetName=NetR10_2 Pin=R10-2
+Added Pin To Net: NetName=NetDS1_9 Pin=R11-1
+Added Pin To Net: NetName=NetR11_2 Pin=R11-2
+Added Pin To Net: NetName=NetDS1_10 Pin=R12-1
+Added Pin To Net: NetName=NetR12_2 Pin=R12-2
+Added Pin To Net: NetName=NetDS2_7 Pin=R13-1
+Added Pin To Net: NetName=NetR13_2 Pin=R13-2
+Added Pin To Net: NetName=NetDS2_6 Pin=R14-1
+Added Pin To Net: NetName=NetR14_2 Pin=R14-2
+Added Pin To Net: NetName=NetDS2_4 Pin=R15-1
+Added Pin To Net: NetName=NetR15_2 Pin=R15-2
+Added Pin To Net: NetName=NetDS2_2 Pin=R16-1
+Added Pin To Net: NetName=NetR16_2 Pin=R16-2
+Added Pin To Net: NetName=NetDS2_1 Pin=R17-1
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=NetDS2_9 Pin=R18-1
+Added Pin To Net: NetName=NetR18_2 Pin=R18-2
+Added Pin To Net: NetName=NetDS2_10 Pin=R19-1
+Added Pin To Net: NetName=NetR19_2 Pin=R19-2
+Added Pin To Net: NetName=NetDS3_7 Pin=R20-1
+Added Pin To Net: NetName=NetR20_2 Pin=R20-2
+Added Pin To Net: NetName=NetDS3_6 Pin=R21-1
+Added Pin To Net: NetName=NetR21_2 Pin=R21-2
+Added Pin To Net: NetName=NetDS3_4 Pin=R22-1
+Added Pin To Net: NetName=NetR22_2 Pin=R22-2
+Added Pin To Net: NetName=NetDS3_2 Pin=R23-1
+Added Pin To Net: NetName=NetR23_2 Pin=R23-2
+Added Pin To Net: NetName=NetDS3_1 Pin=R24-1
+Added Pin To Net: NetName=NetR24_2 Pin=R24-2
+Added Pin To Net: NetName=NetDS3_9 Pin=R25-1
+Added Pin To Net: NetName=NetR25_2 Pin=R25-2
+Added Pin To Net: NetName=NetDS3_10 Pin=R26-1
+Added Pin To Net: NetName=NetR26_2 Pin=R26-2
+Added Pin To Net: NetName=NetDS4_7 Pin=R27-1
+Added Pin To Net: NetName=NetR27_2 Pin=R27-2
+Added Pin To Net: NetName=NetDS4_6 Pin=R28-1
+Added Pin To Net: NetName=NetR28_2 Pin=R28-2
+Added Pin To Net: NetName=NetDS4_4 Pin=R29-1
+Added Pin To Net: NetName=NetR29_2 Pin=R29-2
+Added Pin To Net: NetName=NetDS4_2 Pin=R30-1
+Added Pin To Net: NetName=NetR30_2 Pin=R30-2
+Added Pin To Net: NetName=NetDS4_1 Pin=R31-1
+Added Pin To Net: NetName=NetR31_2 Pin=R31-2
+Added Pin To Net: NetName=NetDS4_9 Pin=R32-1
+Added Pin To Net: NetName=NetR32_2 Pin=R32-2
+Added Pin To Net: NetName=NetDS4_10 Pin=R33-1
+Added Pin To Net: NetName=NetR33_2 Pin=R33-2
+Added Pin To Net: NetName=NetD2_1 Pin=RESET-1
+Added Pin To Net: NetName=5V Pin=RESET-2
+Added Pin To Net: NetName=NetD2_1 Pin=RESET-3
+Added Pin To Net: NetName=5V Pin=RESET-4
+Added Pin To Net: NetName=GND Pin=START-1
+Added Pin To Net: NetName=NetR2_1 Pin=START-2
+Added Pin To Net: NetName=GND Pin=START-3
+Added Pin To Net: NetName=NetR2_1 Pin=START-4
+Added Pin To Net: NetName=GND Pin=STOP-1
+Added Pin To Net: NetName=NetR3_1 Pin=STOP-2
+Added Pin To Net: NetName=GND Pin=STOP-3
+Added Pin To Net: NetName=NetR3_1 Pin=STOP-4
+Added Pin To Net: NetName=NetC1_2 Pin=X1-1
+Added Pin To Net: NetName=NetC2_2 Pin=X1-2
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component C1 33pF/50V
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component C2 33pF/50V
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component C3 100nF/50V
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component C4 10uF/50V
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component C5 1uF/50V
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component C6 22nF/50V
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component D1 1N4007
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component D2 1N4007
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS1 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS2 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS3 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS4 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component IC1 LM7805
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component JDC Jac DC
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component R1 10K/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component R2 10K/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component R3 10K/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component R4 10K/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component R5 10K/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R6 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R7 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R8 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R9 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R10 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R11 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R12 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R13 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R14 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R15 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R16 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R17 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R18 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R19 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R20 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R21 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R22 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R23 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R24 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R25 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R26 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R27 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R28 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R29 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R30 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R31 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R32 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R33 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component RESET SW
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component START SW
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component STOP SW
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component X1 12Mhz
+Added Room: Name=REACTION-CIRCUIT-CONTROL.SchDoc
+Added Room: Name=REACTION-CIRCUIT-DISPLAY.SchDoc

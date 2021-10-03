@@ -1,0 +1,63 @@
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=C? NewDesignator=C2
+Change Component Designator: OldDesignator=C? NewDesignator=C3
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=C? NewDesignator=C5
+Change Component Designator: OldDesignator=C? NewDesignator=C6
+Change Component Designator: OldDesignator=C? NewDesignator=C7
+Change Component Designator: OldDesignator=IC? NewDesignator=IC1
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U2
+Change Component Designator: OldDesignator=U? NewDesignator=U3
+Change Component Designator: OldDesignator=VR? NewDesignator=VR1
+Added Pin To Net: NetName=-12V Pin=C5-1
+Added Pin To Net: NetName=+12V Pin=C5-2
+Added Pin To Net: NetName=5V Pin=C5-3
+Added Pin To Net: NetName=GND Pin=C5-4
+Added Pin To Net: NetName=SAW-TOOTH Pin=C5-5
+Added Pin To Net: NetName=GND Pin=C5-6
+Added Pin To Net: NetName=GND Pin=C5-7
+Added Pin To Net: NetName=SAW-TOOTH Pin=C5-8
+Added Pin To Net: NetName=GND Pin=C5-9
+Added Pin To Net: NetName=5V Pin=C5-10
+Added Pin To Net: NetName=+12V Pin=C5-11
+Added Pin To Net: NetName=-12V Pin=C5-12
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC7_1
+Change Net Name : Old Net Name=NetIC?_4 New Net Name=NetIC1_4
+Change Net Name : Old Net Name=NetIC?_14 New Net Name=NetIC1_14
+Change Net Name : Old Net Name=NetIC?_15 New Net Name=NetIC1_15
+Change Net Name : Old Net Name=NetR?_1 New Net Name=NetR2_1
+Change Net Name : Old Net Name=NetU?_11 New Net Name=NetU1_11
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=NetC3_1 Pin=R1-2
+Added Pin To Net: NetName=NetC3_1 Pin=R2-2
+Added Pin To Net: NetName=NetC3_1 Pin=U2-2
+Added Pin To Net: NetName=NetC3_1 Pin=U2-6
+Added Net: Name=NetC3_1
+Added Pin To Net: NetName=NetC4_1 Pin=C4-1
+Added Pin To Net: NetName=NetC4_1 Pin=U2-5
+Added Net: Name=NetC4_1
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=R6-1
+Added Pin To Net: NetName=NetR3_1 Pin=U3-6
+Added Net: Name=NetR3_1
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component C1 100nF
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component C2 100nF
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component C3 1nF
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component C4 100nF
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component C5 JP6x2
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component C6 100nF
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component R1 1K2
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component R2 2K2
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component R4 5K1
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component R5 1K
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component R6 1K
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component U2 NE555
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component U3 TL071CP
+Added Room: Name=SAW-TOOTH-DAC0808

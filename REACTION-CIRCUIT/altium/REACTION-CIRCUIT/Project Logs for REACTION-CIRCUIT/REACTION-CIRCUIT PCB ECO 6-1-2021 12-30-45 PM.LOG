@@ -1,0 +1,32 @@
+Added Component: Designator=JU1(JUMPER 5MM)
+Added Component: Designator=JU2(JUMPER 5MM)
+Added Component: Designator=JU3(JUMPER 5MM)
+Added Component: Designator=JU4(JUMPER 5MM)
+Added Component: Designator=JU5(JUMPER 5MM)
+Added Component: Designator=JU6(JUMPER 5MM)
+Added Component: Designator=JU7(JUMPER 5MM)
+Added Component: Designator=JU8(JUMPER 5MM)
+Added Component: Designator=JU9(JUMPER 5MM)
+Added Component: Designator=JU10(JUMPER 5MM)
+Added Component: Designator=JU11(JUMPER 5MM)
+Added Component: Designator=JU12(JUMPER 5MM)
+Added Component: Designator=JU13(JUMPER 5MM)
+Added Component: Designator=JU14(JUMPER 5MM)
+Added Component: Designator=JU15(JUMPER 5MM)
+Added Component: Designator=JU16(JUMPER 5MM)
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU1 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU2 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU3 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU4 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU5 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU6 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU7 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU8 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU9 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU10 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU11 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU12 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU13 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU14 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU15 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU16 JUMPER 5MM

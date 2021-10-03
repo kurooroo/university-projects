@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "CURRENT-PROTECTION-RELAY-ARDUINO.ino",
+    "output": "./build"
+}

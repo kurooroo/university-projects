@@ -1,0 +1,9 @@
+DHT11_Temperature
+DHT11_Humidity
+temp
+humid
+hByte1
+hByte2
+tByte1
+tByte2
+checksum

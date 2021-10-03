@@ -1,0 +1,274 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/18/2021  10:14:05  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\TUNABASICSOFT\KEILCV5\KEIL\C51\BIN\BL51.EXE STARTUP.obj, main.obj TO HEALTH-CHECK RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  main.obj (MAIN)
+  D:\TUNABASICSOFT\KEILCV5\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  D:\TUNABASICSOFT\KEILCV5\KEIL\C51\LIB\C51S.LIB (?C?ULCMP)
+
+
+LINK MAP OF MODULE:  HEALTH-CHECK (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0016H     UNIT         ?DT?MAIN
+            IDATA   001EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     0003H     UNIT         ?PR?BUTTON_SOS?MAIN
+                    0009H     0002H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     01D5H     UNIT         ?PR?MAIN?MAIN
+            CODE    01E3H     008CH     UNIT         ?C_C51STARTUP
+            CODE    026FH     0028H     UNIT         ?C_INITSEG
+            CODE    0297H     0025H     UNIT         ?PR?ADC_READ?MAIN
+            CODE    02BCH     001EH     UNIT         ?PR?TIMER0_ISR?MAIN
+            CODE    02DAH     0012H     UNIT         ?PR?TIMER_INIT?MAIN
+            CODE    02ECH     0011H     UNIT         ?C?LIB_CODE
+            CODE    02FDH     0009H     UNIT         ?PR?BUTTON_INIT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   HEALTH-CHECK (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?BUTTON_INIT?MAIN
+  +--> ?PR?TIMER_INIT?MAIN
+  +--> ?PR?ADC_READ?MAIN
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2021  10:14:05  PAGE 2
+
+
+
+SYMBOL TABLE OF MODULE:  HEALTH-CHECK (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:01E3H         SEGMENT       ?C_C51STARTUP
+  I:001EH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:01E6H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:01E3H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:01E3H         LINE#         133
+  C:01E5H         LINE#         134
+  C:01E6H         LINE#         135
+  C:01E7H         LINE#         136
+  C:01E9H         LINE#         185
+  C:01ECH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:02BCH         PUBLIC        TIMER0_ISR
+  B:00A8H.7       PUBLIC        EA
+  B:0080H.0       PUBLIC        P0_0
+  B:0090H.0       PUBLIC        P1_0
+  B:0080H.1       PUBLIC        P0_1
+  B:0090H.1       PUBLIC        P1_1
+  B:0080H.2       PUBLIC        P0_2
+  B:0090H.2       PUBLIC        P1_2
+  D:0008H         PUBLIC        coNhietDoCanhBao
+  D:0009H         PUBLIC        NHIET_DO_CAO
+  C:000EH         PUBLIC        main
+  C:0297H         PUBLIC        ADC_Read
+  D:000AH         PUBLIC        NHIET_DO_NGUY_HIEM_THAP
+  D:000BH         PUBLIC        thoiDiemNhietDoBatDauCao
+  D:0089H         PUBLIC        TMOD
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2021  10:14:05  PAGE 3
+
+
+  D:000FH         PUBLIC        rungBinhThuong
+  D:0013H         PUBLIC        hienTai
+  B:00A8H.1       PUBLIC        ET0
+  D:0017H         PUBLIC        NHIET_DO_NGUY_HIEM_CAO
+  D:008CH         PUBLIC        TH0
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  D:008AH         PUBLIC        TL0
+  C:02FDH         PUBLIC        BUTTON_Init
+  B:0088H.4       PUBLIC        TR0
+  D:0018H         PUBLIC        tinhTrangSucKhoe
+  C:0006H         PUBLIC        BUTTON_Sos
+  D:0019H         PUBLIC        nhietDoHienTai
+  C:02DAH         PUBLIC        TIMER_Init
+  D:001AH         PUBLIC        timeUs
+  -------         PROC          ADC_READ
+  -------         DO            
+  D:0007H         SYMBOL        ret
+  -------         ENDDO         
+  C:0297H         LINE#         33
+  C:0297H         LINE#         34
+  C:0297H         LINE#         35
+  C:0299H         LINE#         36
+  C:029BH         LINE#         37
+  C:029DH         LINE#         38
+  C:029FH         LINE#         39
+  C:02A2H         LINE#         40
+  C:02A2H         LINE#         41
+  C:02A3H         LINE#         42
+  C:02A3H         LINE#         43
+  C:02A7H         LINE#         44
+  C:02AAH         LINE#         45
+  C:02AAH         LINE#         46
+  C:02ADH         LINE#         47
+  C:02ADH         LINE#         48
+  C:02B1H         LINE#         49
+  C:02B4H         LINE#         50
+  C:02B4H         LINE#         51
+  C:02B7H         LINE#         52
+  C:02B7H         LINE#         53
+  C:02BBH         LINE#         54
+  C:02BBH         LINE#         55
+  -------         ENDPROC       ADC_READ
+  -------         PROC          TIMER_INIT
+  C:02DAH         LINE#         61
+  C:02DAH         LINE#         62
+  C:02DAH         LINE#         63
+  C:02DCH         LINE#         64
+  C:02DFH         LINE#         65
+  C:02E2H         LINE#         66
+  C:02E5H         LINE#         67
+  C:02E7H         LINE#         68
+  C:02E9H         LINE#         69
+  C:02EBH         LINE#         70
+  -------         ENDPROC       TIMER_INIT
+  -------         PROC          TIMER0_ISR
+  C:02BCH         LINE#         73
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2021  10:14:05  PAGE 4
+
+
+  C:02C0H         LINE#         75
+  C:02D5H         LINE#         76
+  -------         ENDPROC       TIMER0_ISR
+  -------         PROC          BUTTON_INIT
+  C:02FDH         LINE#         79
+  C:02FDH         LINE#         80
+  C:02FDH         LINE#         81
+  C:02FFH         LINE#         82
+  C:0301H         LINE#         83
+  C:0303H         LINE#         84
+  C:0305H         LINE#         85
+  -------         ENDPROC       BUTTON_INIT
+  -------         PROC          BUTTON_SOS
+  C:0006H         LINE#         87
+  C:0006H         LINE#         89
+  C:0008H         LINE#         90
+  -------         ENDPROC       BUTTON_SOS
+  -------         PROC          MAIN
+  C:000EH         LINE#         92
+  C:000EH         LINE#         93
+  C:000EH         LINE#         95
+  C:0010H         LINE#         96
+  C:0012H         LINE#         97
+  C:0014H         LINE#         98
+  C:0017H         LINE#         99
+  C:001AH         LINE#         101
+  C:0026H         LINE#         102
+  C:0049H         LINE#         104
+  C:0049H         LINE#         105
+  C:0049H         LINE#         107
+  C:004EH         LINE#         109
+  C:005AH         LINE#         110
+  C:0084H         LINE#         111
+  C:0084H         LINE#         112
+  C:0087H         LINE#         113
+  C:0087H         LINE#         114
+  C:00A8H         LINE#         115
+  C:00A8H         LINE#         116
+  C:00ABH         LINE#         117
+  C:00ADH         LINE#         118
+  C:00ADH         LINE#         119
+  C:00C7H         LINE#         120
+  C:00C7H         LINE#         121
+  C:00CBH         LINE#         122
+  C:00CBH         LINE#         123
+  C:00D7H         LINE#         124
+  C:00DAH         LINE#         125
+  C:00DAH         LINE#         126
+  C:00FDH         LINE#         127
+  C:00FDH         LINE#         128
+  C:0100H         LINE#         129
+  C:0100H         LINE#         130
+  C:0100H         LINE#         132
+  C:0104H         LINE#         133
+  C:0104H         LINE#         134
+  C:0127H         LINE#         135
+  C:0127H         LINE#         136
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2021  10:14:05  PAGE 5
+
+
+  C:0133H         LINE#         137
+  C:0135H         LINE#         138
+  C:0141H         LINE#         139
+  C:0164H         LINE#         141
+  C:0166H         LINE#         142
+  C:0166H         LINE#         143
+  C:0168H         LINE#         144
+  C:016AH         LINE#         145
+  C:016AH         LINE#         146
+  C:016FH         LINE#         147
+  C:016FH         LINE#         148
+  C:0171H         LINE#         149
+  C:0171H         LINE#         150
+  C:017AH         LINE#         151
+  C:017AH         LINE#         152
+  C:017CH         LINE#         153
+  C:017EH         LINE#         154
+  C:018AH         LINE#         155
+  C:01ADH         LINE#         157
+  C:01AFH         LINE#         158
+  C:01BBH         LINE#         159
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?ULCMP
+  C:02ECH         PUBLIC        ?C?ULCMP
+  -------         ENDMOD        ?C?ULCMP
+
+Program Size: data=31.0 xdata=0 code=772
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

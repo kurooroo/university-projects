@@ -1,0 +1,3 @@
+1. Thay IC Not tạo dao động 74HC04 -> CD4049UBE do 74HC04 không phù hợp
+2. Thay ic điều khiển hiện thị đầu ra CD4033 -> CD4026 do CD4033 không có hàng
+3. Thay thạch anh 12MHz -> 2Mhz do IC đếm chia tần số từ 12Mhz xuống 1Mhz CD4520 chỉ có thế đếm xung với tần số tối đa 3Mhz ở mức điện áp cấp vào 5V. Thay hệ số chia của CD4520 từ /12 xuống /2 cho phù hợp

@@ -1,0 +1,8 @@
+Change Component Footprint: Designator=JU1 Old Footprint=JUMPER 10MM New Footprint=JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS2 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS3 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS4 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R19 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R26 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R32 330R/0805
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R33 330R/0805

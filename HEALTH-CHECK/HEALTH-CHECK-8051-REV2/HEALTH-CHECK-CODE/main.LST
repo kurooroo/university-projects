@@ -1,0 +1,190 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2021 10:14:05 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\tunaBasicSoft\keilCv5\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          // Khai bao cac chan su dung
+   4          #define ADC0808_CLK P2_7
+   5          #define ADC_BIT0 P0_0
+   6          #define ADC_BIT1 P0_1
+   7          #define ADC_BIT2 P0_2
+   8          #define BUZZER_PIN P1_0
+   9          #define LED_PIN P1_1
+  10          #define MOTOR_PIN P1_2
+  11          #define BUTTON_PIN P3_2
+  12          
+  13          // #define _5_PHUT 5 * 60 * 1000000 // thoi gian 5 phut thuc te
+  14          // #define _1_PHUT 1 * 60 * 1000000 // thoi gian 1 phut thuc te
+  15          #define _5_PHUT 10000000 // thoi gian 5 phut cho mo phong (uS)
+  16          #define _1_PHUT 2000000  // thoi gian 1 phut  cho mo phong (uS)
+  17          const char NHIET_DO_CAO = 38;
+  18          const char NHIET_DO_NGUY_HIEM_CAO = 40;
+  19          const char NHIET_DO_NGUY_HIEM_THAP = 36;
+  20          
+  21          unsigned long timeUs = 0;  // thoi gian ke tu khi bat dau chuong trinh
+  22          unsigned long hienTai = 0; // thoi gian hien tai
+  23          unsigned char nhietDoHienTai;
+  24          unsigned char tinhTrangSucKhoe = 0; // 0 = binh thuong, 1 = canh bao, 2 = nguy hiem
+  25          // unsigned char canhBaoSOS = 0;
+  26          unsigned char coNhietDoCanhBao = 0;
+  27          unsigned long rungBinhThuong = 0;
+  28          unsigned long thoiDiemNhietDoBatDauCao = 0;
+  29          
+  30          /*****************ADC0808*********************/
+  31          // // Ham doc ADC: ADC 3 bit, Do nhiet do tu 35 - 42 do C
+  32          // // Return: ket qua ADC
+  33          unsigned char ADC_Read()
+  34          {
+  35   1          unsigned char ret = 0;
+  36   1          ADC_BIT0 = 1;
+  37   1          ADC_BIT1 = 1;
+  38   1          ADC_BIT2 = 1;
+  39   1          if (!ADC_BIT2)
+  40   1          {
+  41   2              ret |= 0x01;
+  42   2          }
+  43   1          ret = ret << 1;
+  44   1          if (!ADC_BIT1)
+  45   1          {
+  46   2              ret |= 0x01;
+  47   2          }
+  48   1          ret = ret << 1;
+  49   1          if (!ADC_BIT0)
+  50   1          {
+  51   2              ret |= 0x01;
+  52   2          }
+  53   1          ret = ret + 35;
+  54   1          return ret;
+  55   1      }
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2021 10:14:05 PAGE 2   
+
+  56          
+  57          /*****************Timer*********************/
+  58          // Cau hinh timer0 ngat moi 10us de tao xung clock tan so 12.5kHz cho ADC0808 va
+  59          // theo doi thoi gian de thuc hien chuong trinh
+  60          // Ham khoi tao timer0
+  61          void TIMER_Init(void)
+  62          {
+  63   1          EA = 0;             //cam ngat toan cuc
+  64   1          TMOD = TMOD | 0x02; //timer0 8 bit tu nap lai
+  65   1          TH0 = 206;
+  66   1          TL0 = 206; // tao ngat moi 50us
+  67   1          TR0 = 1;   // khoi dong timer 0
+  68   1          ET0 = 1;   // cho phep ngat timer 0
+  69   1          EA = 1;    // cho phep ngat toan cuc
+  70   1      }
+  71          
+  72          // Chuong trinh phuc vu ngat timer 0
+  73          void TIMER0_ISR() interrupt 1
+  74          {
+  75   1          timeUs += 50; // cong them thoi gian vao bien luu tru
+  76   1      }
+  77          /*****************External Interrupt*********************/
+  78          // Khoi tao nut nhan co ngat canh suon xuong
+  79          void BUTTON_Init(void)
+  80          {
+  81   1          EA = 0;
+  82   1          IT0 = 1;
+  83   1          EX0 = 1;
+  84   1          EA = 1;
+  85   1      }
+  86          // Chuong trinh phuc vu ngat nut nhan
+  87          void BUTTON_Sos(void) interrupt 0
+  88          {
+  89   1          BUZZER_PIN = !BUZZER_PIN; // Dao trang thai pin coi chip
+  90   1      }
+  91          
+  92          void main(void)
+  93          {
+  94   1          // UART_Init();
+  95   1          MOTOR_PIN = 0;
+  96   1          LED_PIN = 0;
+  97   1          BUZZER_PIN = 1;
+  98   1          BUTTON_Init();
+  99   1          TIMER_Init();
+ 100   1          // cho 1s = 1000000us de cam bien on dinh
+ 101   1          hienTai = timeUs;
+ 102   1          while (timeUs - hienTai < 1000000)
+ 103   1              ;
+ 104   1          while (1)
+ 105   1          {
+ 106   2              // Doc nhiet do cam bien
+ 107   2              nhietDoHienTai = ADC_Read();
+ 108   2              // Giam sat tinh trang suc khoe
+ 109   2              hienTai = timeUs;
+ 110   2              if ((nhietDoHienTai < NHIET_DO_NGUY_HIEM_THAP) || (nhietDoHienTai > NHIET_DO_NGUY_HIEM_CAO))
+ 111   2              {
+ 112   3                  tinhTrangSucKhoe = 2;
+ 113   3              }
+ 114   2              if ((nhietDoHienTai >= NHIET_DO_NGUY_HIEM_THAP) && (nhietDoHienTai <= NHIET_DO_CAO))
+ 115   2              {
+ 116   3                  tinhTrangSucKhoe = 0;
+ 117   3                  coNhietDoCanhBao = 0;
+C51 COMPILER V9.52.0.0   MAIN                                                              06/18/2021 10:14:05 PAGE 3   
+
+ 118   3              }
+ 119   2              if ((nhietDoHienTai > NHIET_DO_CAO) && (tinhTrangSucKhoe != 2))
+ 120   2              {
+ 121   3                  if (coNhietDoCanhBao == 0)
+ 122   3                  {
+ 123   4                      thoiDiemNhietDoBatDauCao = hienTai;
+ 124   4                      coNhietDoCanhBao = 1;
+ 125   4                  }
+ 126   3                  if (hienTai - thoiDiemNhietDoBatDauCao > _1_PHUT)
+ 127   3                  {
+ 128   4                      tinhTrangSucKhoe = 1;
+ 129   4                  }
+ 130   3              }
+ 131   2              // Dua ra canh bao
+ 132   2              if (tinhTrangSucKhoe == 0)
+ 133   2              {
+ 134   3                  if (hienTai - rungBinhThuong > _5_PHUT)
+ 135   3                  {
+ 136   4                      rungBinhThuong = hienTai;
+ 137   4                      MOTOR_PIN = 1;
+ 138   4                      hienTai = timeUs;
+ 139   4                      while (timeUs - hienTai < 500000)
+ 140   4                          ;
+ 141   4                      MOTOR_PIN = 0;
+ 142   4                  }
+ 143   3                  LED_PIN = 0;
+ 144   3                  MOTOR_PIN = 0;
+ 145   3              }
+ 146   2              if (tinhTrangSucKhoe == 1)
+ 147   2              {
+ 148   3                  MOTOR_PIN = 1;
+ 149   3              }
+ 150   2              if (tinhTrangSucKhoe == 2)
+ 151   2              {
+ 152   3                  LED_PIN = 1;
+ 153   3                  MOTOR_PIN = 1;
+ 154   3                  hienTai = timeUs;
+ 155   3                  while (timeUs - hienTai < 1000000)
+ 156   3                      ;
+ 157   3                  MOTOR_PIN = 0;
+ 158   3                  hienTai = timeUs;
+ 159   3                  while (timeUs - hienTai < 2000000)
+ 160   3                      ;
+ 161   3              }
+ 162   2          }
+ 163   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    566    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     22    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

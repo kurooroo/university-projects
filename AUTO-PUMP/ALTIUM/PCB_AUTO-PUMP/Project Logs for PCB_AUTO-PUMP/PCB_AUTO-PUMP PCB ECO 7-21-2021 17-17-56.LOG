@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetC1_2 Pin=Q1-2
+Removed Member From Class: ClassName=PCB_AUTO-PUMP Member=Q1
+Added Component: Designator=Q?(TO92-123)
+Add component (AddParameter): Name = "Value"; Value = "C1815"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_2 Pin=Q?-3
+Added Pin To Net: NetName=NetQ?_1 Pin=Q?-1
+Added Pin To Net: NetName=NetQ?_1 Pin=R7-1
+Added Pin To Net: NetName=NetQ?_1 Pin=U2-2
+Added Net: Name=NetQ?_1
+Added Pin To Net: NetName=NetQ?_2 Pin=Q?-2
+Added Pin To Net: NetName=NetQ?_2 Pin=R6-2
+Added Pin To Net: NetName=NetQ?_2 Pin=R7-2
+Added Net: Name=NetQ?_2
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component Q? 2N3904

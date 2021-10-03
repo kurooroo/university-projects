@@ -1,0 +1,4 @@
+Change Class Name : Old Net Name=Designator New Net Name=REACTION-CIRCUIT-CONTROL.SchDoc
+Added Class: Name=REACTION-CIRCUIT-DISPLAY.SchDoc
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component C6 22nF/50V
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component R3 10K/0805

@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=LCD? NewDesignator=LCD1
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=SP? NewDesignator=SP1
+Change Component Designator: OldDesignator=VR? NewDesignator=VR1
+Change Net Name : Old Net Name=NetLCD?_3 New Net Name=NetLCD1_3
+Added Member To Class: ClassName=PCB_RFID-Project Member=Component R2 330R

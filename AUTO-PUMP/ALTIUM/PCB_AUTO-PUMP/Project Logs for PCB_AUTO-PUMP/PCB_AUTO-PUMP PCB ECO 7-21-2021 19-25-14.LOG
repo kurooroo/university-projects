@@ -1,0 +1,5 @@
+Change Component Comment : Designator=R7 Old Comment=1K New Comment=10K
+Added Pin To Net: NetName=GND Pin=Q1-1
+Added Pin To Net: NetName=GND Pin=R7-1
+Added Pin To Net: NetName=GND Pin=U2-2
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU11 JUMPER

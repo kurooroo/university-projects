@@ -1,0 +1,7 @@
+{
+    "configuration": "cpu=atmega328old",
+    "board": "arduino:avr:nano",
+    "sketch": "WOOD-WORKSHOP-ARDUINO-REV1.ino",
+    "port": "COM10",
+    "output": "/build"
+}

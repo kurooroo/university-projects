@@ -1,0 +1,2 @@
+Lấy file hex ở trong folder: debug/exe
+Lệnh điều khiển: phím số 1, 2, 3, 4

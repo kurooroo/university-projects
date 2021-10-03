@@ -1,0 +1,10 @@
+Added Component: Designator=JU4(JUMPER 5MM)
+Added Component: Designator=JU5(JUMPER 5MM)
+Added Component: Designator=JU6(JUMPER 5MM)
+Added Component: Designator=JU7(JUMPER 5MM)
+Added Component: Designator=JU8(JUMPER 5MM)
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component JU4 JUMPER 5MM
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component JU5 JUMPER 5MM
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component JU6 JUMPER 5MM
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component JU7 JUMPER 5MM
+Added Member To Class: ClassName=SAW-TOOTH-DAC0808 Member=Component JU8 JUMPER 5MM

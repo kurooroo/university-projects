@@ -1,0 +1,33 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+rx_buffer                                                                         0x0160       8
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+rx_wr_index                                                                       R5           1
+rx_rd_index                                                                       R4           1
+rx_counter                                                                        R7           1
+rx_buffer_overflow                                                                R2.0      1bit
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+SPI_Write                                                                         0x00072     24
+UART_Write                                                                        0x0008A      6
+UART_Println                                                                      0x00090     20
+UART_Print                                                                        0x000A4     18
+usart_rx_isr                                                                      0x000B6     90
+read_adc                                                                          0x00110     14
+spi_isr                                                                           0x0011E      4
+main                                                                              0x00122    109
+put_buff_G100                                                                     0x0018F     64
+_print_G100                                                                       0x001CF    308
+sprintf                                                                           0x00303     52
+strlen                                                                            0x00337     12
+strlenf                                                                           0x00343     13

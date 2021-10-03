@@ -1,0 +1,35 @@
+Change Component Footprint: Designator=JU1 Old Footprint=JUMPER 10MM New Footprint=JUMPER 5MM
+Added Pin To Net: NetName=NetDS2_1 Pin=DS2-1
+Added Pin To Net: NetName=NetDS2_2 Pin=DS2-2
+Added Pin To Net: NetName=GND Pin=DS2-3
+Added Pin To Net: NetName=NetDS2_4 Pin=DS2-4
+Added Pin To Net: NetName=NetDS2_6 Pin=DS2-6
+Added Pin To Net: NetName=NetDS2_7 Pin=DS2-7
+Added Pin To Net: NetName=GND Pin=DS2-8
+Added Pin To Net: NetName=NetDS2_9 Pin=DS2-9
+Added Pin To Net: NetName=NetDS2_10 Pin=DS2-10
+Added Pin To Net: NetName=NetDS3_1 Pin=DS3-1
+Added Pin To Net: NetName=NetDS3_2 Pin=DS3-2
+Added Pin To Net: NetName=GND Pin=DS3-3
+Added Pin To Net: NetName=NetDS3_4 Pin=DS3-4
+Added Pin To Net: NetName=NetDS3_6 Pin=DS3-6
+Added Pin To Net: NetName=NetDS3_7 Pin=DS3-7
+Added Pin To Net: NetName=GND Pin=DS3-8
+Added Pin To Net: NetName=NetDS3_9 Pin=DS3-9
+Added Pin To Net: NetName=NetDS3_10 Pin=DS3-10
+Added Pin To Net: NetName=NetDS4_1 Pin=DS4-1
+Added Pin To Net: NetName=NetDS4_2 Pin=DS4-2
+Added Pin To Net: NetName=GND Pin=DS4-3
+Added Pin To Net: NetName=NetDS4_4 Pin=DS4-4
+Added Pin To Net: NetName=NetDS4_6 Pin=DS4-6
+Added Pin To Net: NetName=NetDS4_7 Pin=DS4-7
+Added Pin To Net: NetName=GND Pin=DS4-8
+Added Pin To Net: NetName=NetDS4_9 Pin=DS4-9
+Added Pin To Net: NetName=NetDS4_10 Pin=DS4-10
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS2 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS3 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component DS4 7SEG
+Added Member To Class: ClassName=REACTION-CIRCUIT-DISPLAY.SchDoc Member=Component R23 330R/0805
+Added Room: Name=REACTION-CIRCUIT
+Added Room: Name=REACTION-CIRCUIT-CONTROL.SchDoc
+Added Room: Name=REACTION-CIRCUIT-DISPLAY.SchDoc

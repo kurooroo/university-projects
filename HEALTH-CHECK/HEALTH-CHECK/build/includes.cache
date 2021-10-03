@@ -1,0 +1,37 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\variants\\eightanaloginputs"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\HEALTH-CHECK\\HEALTH-CHECK\\build\\sketch\\HEALTH-CHECK.ino.cpp",
+    "Include": "OneWire.h",
+    "Includepath": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\libraries\\OneWire-2.3.5"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\HEALTH-CHECK\\HEALTH-CHECK\\build\\sketch\\HEALTH-CHECK.ino.cpp",
+    "Include": "DallasTemperature.h",
+    "Includepath": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\DallasTemperature"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\HEALTH-CHECK\\HEALTH-CHECK\\build\\sketch\\HEALTH-CHECK.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\libraries\\OneWire-2.3.5\\OneWire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\DallasTemperature\\DallasTemperature.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

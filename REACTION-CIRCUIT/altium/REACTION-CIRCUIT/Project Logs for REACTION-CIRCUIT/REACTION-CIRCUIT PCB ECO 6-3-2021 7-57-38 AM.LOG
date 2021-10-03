@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=NetC2_2 Pin=C2-2
+Removed Pin From Net: NetName=NetC2_2 Pin=X1-2
+Added Component: Designator=R34(Res 0805(2012))
+Added Pin To Net: NetName=NetC2_2 Pin=R34-1
+Change Net Name : Old Net Name=NetC2_2 New Net Name=NetR1_1
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=R34-2
+Added Pin To Net: NetName=NetC2_2 Pin=X1-2
+Added Net: Name=NetC2_2
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component R34 470R/0805

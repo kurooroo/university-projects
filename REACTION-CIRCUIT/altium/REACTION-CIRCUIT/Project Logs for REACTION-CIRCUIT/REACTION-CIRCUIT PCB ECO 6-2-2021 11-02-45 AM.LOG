@@ -1,0 +1,19 @@
+Added Component: Designator=JU19(JUMPER 5MM)
+Added Component: Designator=JU20(JUMPER 5MM)
+Added Component: Designator=JU21(JUMPER 5MM)
+Added Component: Designator=JU22(JUMPER 5MM)
+Added Component: Designator=JU23(JUMPER 5MM)
+Added Component: Designator=JU24(JUMPER 5MM)
+Added Component: Designator=JU25(JUMPER 5MM)
+Added Component: Designator=JU26(JUMPER 5MM)
+Added Component: Designator=JU27(JUMPER 5MM)
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU19 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU20 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU21 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU22 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU23 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU24 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU25 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU26 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT Member=Component JU27 JUMPER 5MM
+Added Member To Class: ClassName=REACTION-CIRCUIT-CONTROL.SchDoc Member=Component U3 CD4518BE

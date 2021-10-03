@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=5V Pin=D3-1
+Removed Pin From Net: NetName=5V Pin=L1-1
+Removed Pin From Net: NetName=5V Pin=U2-2
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetD3_1 Pin=L1-1
+Added Pin To Net: NetName=NetD3_1 Pin=U2-2
+Added Net: Name=NetD3_1

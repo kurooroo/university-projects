@@ -1,0 +1,193 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              06/05/2021 20:09:17 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\tunaBasicSoft\keilCv5\keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          // Khai bao chan giao tiep voi ADC0808
+   4          #define ADC0808_DATA P0
+   5          #define ADC0808_A P2_0
+   6          #define ADC0808_B P2_1
+   7          #define ADC0808_C P2_2
+   8          #define ADC0808_ALE P2_3
+   9          #define ADC0808_START P2_4
+  10          #define ADC0808_EOC P2_5
+  11          #define ADC0808_OE P2_6
+  12          #define ADC0808_CLK P2_7
+  13          #define BUZZER_PIN P1_0
+  14          #define LED_PIN P1_1
+  15          #define MOTOR_PIN P1_2
+  16          #define BUTTON_PIN P3_2
+  17          
+  18          // #define _5_PHUT 5 * 60 * 1000000 // thoi gian 5 phut thuc te
+  19          // #define _1_PHUT 1 * 60 * 1000000 // thoi gian 1 phut thuc te
+  20          #define _5_PHUT 10000000 // thoi gian 5 phut cho mo phong (uS)
+  21          #define _1_PHUT 2000000  // thoi gian 1 phut  cho mo phong (uS)
+  22          const char NHIET_DO_CAO = 38;
+  23          const char NHIET_DO_NGUY_HIEM_CAO = 40;
+  24          const char NHIET_DO_NGUY_HIEM_THAP = 36;
+  25          
+  26          unsigned long timeUs = 0; // thoi gian ke tu khi bat dau chuong trinh
+  27          unsigned long hienTai = 0; // thoi gian hien tai
+  28          unsigned char nhietDoHienTai;
+  29          unsigned char tinhTrangSucKhoe = 0; // 0 = binh thuong, 1 = canh bao, 2 = nguy hiem
+  30          // unsigned char canhBaoSOS = 0;
+  31          unsigned char coNhietDoCanhBao = 0;
+  32          unsigned long rungBinhThuong = 0;
+  33          unsigned long thoiDiemNhietDoBatDauCao = 0;
+  34          
+  35          /*****************ADC0808*********************/
+  36          // Ham doc ADC0808 theo kenh
+  37          // Input: kenh ADC (0->8)
+  38          // Return: ket qua ADC
+  39          unsigned char ADC0808_Read(unsigned char f_channel)
+  40          {
+  41   1          unsigned char ret;
+  42   1          ADC0808_A = f_channel & 0x01;   //Chon kenh adc
+  43   1          ADC0808_B = f_channel & 0x02;   
+  44   1          ADC0808_C = f_channel & 0x04;
+  45   1          ADC0808_ALE = 1;                
+  46   1          ADC0808_START = 1;
+  47   1          ADC0808_ALE = 0;                // Chot dia chi kenh adc
+  48   1          ADC0808_START = 0;              // Bat dau chuyen doi
+  49   1          while (ADC0808_EOC)
+  50   1              ;
+  51   1          while (!ADC0808_EOC)
+  52   1              ;                           // Cho chuyen doi
+  53   1          ADC0808_OE = 1;
+  54   1          ret = ADC0808_DATA;             // Doc du lieu
+  55   1          ADC0808_OE = 0;
+C51 COMPILER V9.52.0.0   MAIN                                                              06/05/2021 20:09:17 PAGE 2   
+
+  56   1          return ret;
+  57   1      }
+  58          
+  59          /*****************Timer*********************/
+  60          // Cau hinh timer0 ngat moi 10us de tao xung clock tan so 12.5kHz cho ADC0808 va
+  61          // theo doi thoi gian de thuc hien chuong trinh
+  62          // Ham khoi tao timer0
+  63          void TIMER_Init(void)
+  64          {
+  65   1          EA = 0;             //cam ngat toan cuc
+  66   1          TMOD = TMOD | 0x02; //timer0 8 bit tu nap lai
+  67   1          TH0 = 216;
+  68   1          TL0 = 216; // tao ngat moi 40us
+  69   1          TR0 = 1;   // khoi dong timer 0
+  70   1          ET0 = 1;   // cho phep ngat timer 0
+  71   1          EA = 1;    // cho phep ngat toan cuc
+  72   1      }
+  73          
+  74          // Chuong trinh phuc vu ngat timer 0
+  75          void TIMER0_ISR() interrupt 1
+  76          {
+  77   1          ADC0808_CLK = ~ADC0808_CLK; // dao bit de tao xung clock co duty 50%
+  78   1          timeUs += 40; // cong them thoi gian vao bien luu tru
+  79   1      }
+  80          /*****************External Interrupt*********************/
+  81          // Khoi tao nut nhan co ngat canh suon xuong
+  82          void BUTTON_Init(void)
+  83          {
+  84   1          EA = 0;
+  85   1          IT0 = 1;
+  86   1          EX0 = 1;
+  87   1          EA = 1;
+  88   1      }
+  89          // Chuong trinh phuc vu ngat nut nhan
+  90          void BUTTON_Sos(void) interrupt 0
+  91          {
+  92   1          BUZZER_PIN = !BUZZER_PIN; // Dao trang thai pin coi chip
+  93   1      }
+  94          
+  95          void main(void)
+  96          {
+  97   1          // UART_Init();
+  98   1          MOTOR_PIN = 0;
+  99   1          LED_PIN = 0;
+ 100   1          BUZZER_PIN = 1;
+ 101   1          BUTTON_Init();
+ 102   1          TIMER_Init();
+ 103   1          // cho 1s = 1000000us de cam bien on dinh
+ 104   1          hienTai = timeUs;
+ 105   1          while (timeUs - hienTai < 1000000)
+ 106   1              ;
+ 107   1          while (1)
+ 108   1          {
+ 109   2              // Doc nhiet do cam bien
+ 110   2              nhietDoHienTai = ADC0808_Read(0);
+ 111   2              // Giam sat tinh trang suc khoe
+ 112   2              hienTai = timeUs;
+ 113   2              if ((nhietDoHienTai < NHIET_DO_NGUY_HIEM_THAP) || (nhietDoHienTai > NHIET_DO_NGUY_HIEM_CAO))
+ 114   2              {
+ 115   3                  tinhTrangSucKhoe = 2;
+ 116   3              }
+ 117   2              if ((nhietDoHienTai >= NHIET_DO_NGUY_HIEM_THAP) && (nhietDoHienTai <= NHIET_DO_CAO))
+C51 COMPILER V9.52.0.0   MAIN                                                              06/05/2021 20:09:17 PAGE 3   
+
+ 118   2              {
+ 119   3                  tinhTrangSucKhoe = 0;
+ 120   3                  coNhietDoCanhBao = 0;
+ 121   3              }
+ 122   2              if ((nhietDoHienTai > NHIET_DO_CAO) && (tinhTrangSucKhoe != 2))
+ 123   2              {
+ 124   3                  if (coNhietDoCanhBao == 0)
+ 125   3                  {
+ 126   4                      thoiDiemNhietDoBatDauCao = hienTai;
+ 127   4                      coNhietDoCanhBao = 1;
+ 128   4                  }
+ 129   3                  if (hienTai - thoiDiemNhietDoBatDauCao > _1_PHUT)
+ 130   3                  {
+ 131   4                      tinhTrangSucKhoe = 1;
+ 132   4                  }
+ 133   3              }
+ 134   2              // Dua ra canh bao
+ 135   2              if (tinhTrangSucKhoe == 0)
+ 136   2              {
+ 137   3                  if (hienTai - rungBinhThuong > _5_PHUT)
+ 138   3                  {
+ 139   4                      rungBinhThuong = hienTai;
+ 140   4                      MOTOR_PIN = 1;
+ 141   4                      hienTai = timeUs;
+ 142   4                      while (timeUs - hienTai < 500000)
+ 143   4                          ;
+ 144   4                      MOTOR_PIN = 0;
+ 145   4                  }
+ 146   3                  LED_PIN = 0;
+ 147   3                  MOTOR_PIN = 0;
+ 148   3              }
+ 149   2              if (tinhTrangSucKhoe == 1)
+ 150   2              {
+ 151   3                  MOTOR_PIN = 1;
+ 152   3              }
+ 153   2              if (tinhTrangSucKhoe == 2)
+ 154   2              {
+ 155   3                  LED_PIN = 1;
+ 156   3                  MOTOR_PIN = 1;
+ 157   3                  hienTai = timeUs;
+ 158   3                  while (timeUs - hienTai < 1000000)
+ 159   3                      ;
+ 160   3                  MOTOR_PIN = 0;
+ 161   3                  hienTai = timeUs;
+ 162   3                  while (timeUs - hienTai < 2000000)
+ 163   3                      ;
+ 164   3              }
+ 165   2          }
+ 166   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    567    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     22    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

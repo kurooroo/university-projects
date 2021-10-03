@@ -1,0 +1,27 @@
+Change Component Designator: OldDesignator=Q? NewDesignator=Q1
+Added Component: Designator=JU1(JUMPER 5MM)
+Added Component: Designator=JU2(JUMPER 5MM)
+Added Component: Designator=JU3(JUMPER 5MM)
+Added Component: Designator=JU4(JUMPER 5MM)
+Added Component: Designator=JU5(JUMPER 5MM)
+Added Component: Designator=JU6(JUMPER 5MM)
+Added Component: Designator=JU7(JUMPER 5MM)
+Added Component: Designator=JU8(JUMPER 5MM)
+Added Component: Designator=JU9(JUMPER 5MM)
+Added Component: Designator=JU10(JUMPER 5MM)
+Added Component: Designator=JU11(JUMPER 5MM)
+Added Component: Designator=JU12(JUMPER 5MM)
+Change Net Name : Old Net Name=NetQ?_1 New Net Name=NetQ1_1
+Change Net Name : Old Net Name=NetQ?_2 New Net Name=NetQ1_2
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU1 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU2 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU3 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU4 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU5 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU6 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU7 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU8 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU9 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU10 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU11 JUMPER
+Added Member To Class: ClassName=PCB_AUTO-PUMP Member=Component JU12 JUMPER

@@ -1,0 +1,2 @@
+Added Class: Name=BIT
+Change Rule Scope 1 : Old Scope=InNet('BIT7') New Scope=InNetClass('BIT')

@@ -1,0 +1,24 @@
+Added Component: Designator=JU1(JUMPER 5MM)
+Added Component: Designator=JU2(JUMPER 5MM)
+Added Component: Designator=JU3(JUMPER 5MM)
+Added Component: Designator=JU4(JUMPER 5MM)
+Added Component: Designator=JU5(JUMPER 5MM)
+Added Component: Designator=JU6(JUMPER 5MM)
+Added Component: Designator=JU7(JUMPER 5MM)
+Added Component: Designator=JU8(JUMPER 5MM)
+Added Component: Designator=JU9(JUMPER 5MM)
+Added Component: Designator=JU10(JUMPER 5MM)
+Added Component: Designator=JU11(JUMPER 5MM)
+Added Component: Designator=JU12(JUMPER 5MM)
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU1 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU2 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU3 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU4 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU5 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU6 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU7 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU8 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU9 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU10 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU11 JUMPER 5MM
+Added Member To Class: ClassName=PCB_WOOD-WORKSHOP-REV1 Member=Component JU12 JUMPER 5MM

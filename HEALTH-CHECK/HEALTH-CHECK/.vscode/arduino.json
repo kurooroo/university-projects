@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:nano",
+    "sketch": "HEALTH-CHECK.ino",
+    "output": "./build",
+    "configuration": "cpu=atmega328old"
+}
