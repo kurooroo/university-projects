@@ -1,0 +1,5 @@
+1. Lay file hex code cho vi dieu khien o thu muc:
+- master: MASTER-REV0.hex
+- slave: SLAVE-REV0.hex
+2. Lenh dieu khien: Phim so 1, 2, 3, 4
+3. Cac gia tri nhiet do 85.00 dau tien la gia tri khoi dong cua cam bien
