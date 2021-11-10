@@ -208,7 +208,7 @@ void SetTime()
         break;
       case 3:
         hourInit += 10;
-        if (hourInit > 23)
+        if (hourInit > 23)//03 13 23 03
         {
           hourInit = hourInit - 30;
         }

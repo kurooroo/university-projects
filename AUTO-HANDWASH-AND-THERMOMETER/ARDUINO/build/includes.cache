@@ -1,0 +1,72 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\variants\\eightanaloginputs"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\AUTO-HANDWASH-AND-THERMOMETER\\ARDUINO\\build\\sketch\\ARDUINO.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\libraries\\Wire\\src"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\AUTO-HANDWASH-AND-THERMOMETER\\ARDUINO\\build\\sketch\\ARDUINO.ino.cpp",
+    "Include": "Adafruit_MLX90614.h",
+    "Includepath": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\Adafruit_MLX90614_Library"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\AUTO-HANDWASH-AND-THERMOMETER\\ARDUINO\\build\\sketch\\ARDUINO.ino.cpp",
+    "Include": "LiquidCrystal_I2C.h",
+    "Includepath": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\LiquidCrystal_I2C"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\AUTO-HANDWASH-AND-THERMOMETER\\ARDUINO\\build\\sketch\\ARDUINO.ino.cpp",
+    "Include": "SoftwareSerial.h",
+    "Includepath": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\libraries\\SoftwareSerial\\src"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\AUTO-HANDWASH-AND-THERMOMETER\\ARDUINO\\build\\sketch\\ARDUINO.ino.cpp",
+    "Include": "DFRobotDFPlayerMini.h",
+    "Includepath": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\DFRobotDFPlayerMini"
+  },
+  {
+    "Sourcefile": "d:\\tunaOneDrive\\OneDrive - Hanoi University of Science and Technology\\tunaOneDriveSync\\tunaProjects\\Mercenary-projects\\AUTO-HANDWASH-AND-THERMOMETER\\ARDUINO\\build\\sketch\\ARDUINO.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\libraries\\Wire\\src\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\libraries\\Wire\\src\\utility\\twi.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\Adafruit_MLX90614_Library\\Adafruit_MLX90614.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\LiquidCrystal_I2C\\LiquidCrystal_I2C.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "D:\\tunaBasicSoft\\arduinoIDE\\arduino-1.8.13\\hardware\\arduino\\avr\\libraries\\SoftwareSerial\\src\\SoftwareSerial.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\ngtuan\\Documents\\Arduino\\libraries\\DFRobotDFPlayerMini\\DFRobotDFPlayerMini.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
